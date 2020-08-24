@@ -20,17 +20,16 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      
+
       - name: Node ${{ matrix.node-version}}
         uses: actions/setup-node@v1
-        with: 
+        with:
           node-version: ${{ matrix.node-version }}
 
       - name: yarn install
         run: |
           yarn install
-    
+
       - name: Run test
         run: |
-          echo Starting tests
-          yarn run test
+          yarn run test -- --configuration=ci
