@@ -98,6 +98,7 @@
               "progress": false,
               "browsers": "ChromeHeadlessCI"
             }
+          }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
