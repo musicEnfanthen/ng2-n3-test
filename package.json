@@ -17,7 +17,7 @@
         "test:ci": "yarn test:cov --configuration=ci",
         "lint": "ng lint",
         "e2e": "ng e2e",
-        "deploy:ci": "ng deploy --message \"Release $npm_package_name (v$npm_package_version) on gh-pages\" --repo=https://${GITHUB_TOKEN}@github.com/musicenfanthen/ng2-n3-test"
+        "deploy:ci": "ng deploy --message \"Release $npm_package_name (v$npm_package_version) on gh-pages\" --repo=https://github.com/musicenfanthen/ng2-n3-test"
     },
     "private": true,
     "dependencies": {
