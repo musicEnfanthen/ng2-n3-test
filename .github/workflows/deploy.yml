@@ -36,12 +36,13 @@ jobs:
         name: Deploy app
         needs: build
         runs-on: ${{ matrix.os }}
-            strategy:
-                matrix:
-                    os: [ubuntu-latest]
-                    node-version: [12.18]
+        strategy:
+            matrix:
+                os: [ubuntu-latest]
+                node-version: [12.18]
 
         steps:
             - name: deploy message
-              run: echo "Hello Gh Pages. This will be deployed"
+              run: |
+                echo "Hello Gh Pages. This will be deployed"
 
