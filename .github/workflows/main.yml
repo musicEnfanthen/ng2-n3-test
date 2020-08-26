@@ -34,9 +34,8 @@ jobs:
               run: |
                   yarn run test -- --configuration=ci
 
-    code_coverage:
             - name: Code coverage
-            - uses: codecov/codecov-action@v1
+              uses: codecov/codecov-action@v1
               with:
                 flags: unittests # optional
                 name: codecov-umbrella # optional
