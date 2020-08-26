@@ -4,16 +4,17 @@ on: push
 
 jobs:
     test:
-        runs-on: ubuntu-latest
+        runs-on: ${{ matrix.os }}
         strategy:
             matrix:
+                os: [ubuntu-latest]
                 node-version: [12.x]
 
         steps:
             - name: Checkout repo
               uses: actions/checkout@v2
 
-            - name: Setup node ${{ matrix.node-version}}
+            - name: Set up node ${{ matrix.node-version}}
               uses: actions/setup-node@v1
               with:
                   node-version: ${{ matrix.node-version }}
@@ -28,16 +29,16 @@ jobs:
                       ${{ runner.os }}-node-
 
 
-            - name: yarn install
+            - name: yarn install dependencies
               run: |
                   yarn install
 
-            - name: Run CI tests
+            - name: Run CI tests with coverage
               run: |
                   yarn run test:ci
 
-            - name: Code coverage
+            - name: Upload code coverage
               uses: codecov/codecov-action@v1
-              with:
-                  flags: unittests # optional
-                  name: codecov-umbrella # optional
+                 with:
+                    token: ${{ secrets.CODECOV_TOKEN }}
+
