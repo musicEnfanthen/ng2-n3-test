@@ -141,8 +141,7 @@
                     "builder": "angular-cli-ghpages:deploy",
                     "options": {
                         "baseHref": "/ng2-n3-test/",
-                        "name": "ng2 n3 Test",
-                        "message": "\"Release $npm_package_name (v$npm_package_version) on gh-pages\""
+                        "name": "ng2 n3 Test"
                     }
                 }
             }
