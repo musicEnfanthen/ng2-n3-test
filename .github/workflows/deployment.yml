@@ -1,4 +1,4 @@
-name: Deploy app
+name: Deployment
 
 on:
     push:
@@ -29,6 +29,5 @@ jobs:
 
             - name: Deploy to GH Pages
               run: |
-                  echo "Hello Gh Pages. This will be deployed"
                   yarn run deploy:ci
 
