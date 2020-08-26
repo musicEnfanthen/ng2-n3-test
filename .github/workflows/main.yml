@@ -3,33 +3,40 @@ name: CI Test
 on: push
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [12.x]
+    test:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node-version: [12.x]
 
-    steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
+        steps:
+            - name: Checkout repo
+              uses: actions/checkout@v2
 
-      - name: Cache node modules
-        uses: actions/cache@v1
-        with:
-          path: ~/.yarn
-          key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+            - name: Cache node modules
+              uses: actions/cache@v1
+              with:
+                  path: ~/.yarn
+                  key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-node-
 
-      - name: Node ${{ matrix.node-version}}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
+            - name: Node ${{ matrix.node-version}}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
 
-      - name: yarn install
-        run: |
-          yarn install
+            - name: yarn install
+              run: |
+                  yarn install
 
-      - name: Run test
-        run: |
-          yarn run test -- --configuration=ci
+            - name: Run test
+              run: |
+                  yarn run test -- --configuration=ci
+
+    code_coverage:
+            - name: Code coverage
+            - uses: codecov/codecov-action@v1
+              with:
+                flags: unittests # optional
+                name: codecov-umbrella # optional
