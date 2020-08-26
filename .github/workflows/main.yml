@@ -13,6 +13,12 @@ jobs:
             - name: Checkout repo
               uses: actions/checkout@v2
 
+            - name: Setup node ${{ matrix.node-version}}
+              uses: actions/setup-node@v1
+              with:
+                  node-version: ${{ matrix.node-version }}
+
+
             - name: Cache node modules
               uses: actions/cache@v1
               with:
@@ -21,21 +27,17 @@ jobs:
                   restore-keys: |
                       ${{ runner.os }}-node-
 
-            - name: Node ${{ matrix.node-version}}
-              uses: actions/setup-node@v1
-              with:
-                  node-version: ${{ matrix.node-version }}
 
             - name: yarn install
               run: |
                   yarn install
 
-            - name: Run test
+            - name: Run CI tests
               run: |
-                  yarn run test -- --configuration=ci
+                  yarn run test:ci
 
             - name: Code coverage
               uses: codecov/codecov-action@v1
               with:
-                flags: unittests # optional
-                name: codecov-umbrella # optional
+                  flags: unittests # optional
+                  name: codecov-umbrella # optional
