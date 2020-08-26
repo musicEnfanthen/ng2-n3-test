@@ -10,13 +10,14 @@
         "build": "ng build",
         "build:prod": "yarn build --prod",
         "postbuild:prod": "run-s gzip:dist build:doc",
-        "build:gh": "yarn build:prod --base-href $npm_package_homepage",
+        "build:gh": "yarn build:prod --base-href=/ng2-n3-test/",
         "gzip:dist": "gzipper compress ./dist/ng2-n3-test/",
         "test": "ng test",
         "test:cov": "ng test --code-coverage true",
         "test:ci": "yarn test:cov --configuration=ci",
         "lint": "ng lint",
-        "e2e": "ng e2e"
+        "e2e": "ng e2e",
+        "deploy:ci": "ng deploy --base-href=/ng2-n3-test/"
     },
     "private": true,
     "dependencies": {

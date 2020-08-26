@@ -44,5 +44,6 @@ jobs:
         steps:
             - name: deploy message
               run: |
-                echo "Hello Gh Pages. This will be deployed"
+                  echo "Hello Gh Pages. This will be deployed"
+                  yarn run deploy:ci
 
