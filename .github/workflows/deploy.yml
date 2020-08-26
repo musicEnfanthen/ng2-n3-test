@@ -7,7 +7,7 @@ on:
 
 jobs:
     build:
-        name: Build app (Node v${{ matrix.node-version }}, ${{ matrix.os }})
+        name: Deploy app (Node v${{ matrix.node-version }}, ${{ matrix.os }})
         runs-on: ${{ matrix.os }}
         strategy:
             matrix:
@@ -27,22 +27,7 @@ jobs:
               run: |
                   yarn install
 
-            - name: Build app for Github Pages
-              run: |
-                  yarn run build:gh
-
-
-    deploy:
-        name: Deploy app
-        needs: build
-        runs-on: ${{ matrix.os }}
-        strategy:
-            matrix:
-                os: [ubuntu-latest]
-                node-version: [12.18]
-
-        steps:
-            - name: deploy message
+            - name: Deploy to GH Pages
               run: |
                   echo "Hello Gh Pages. This will be deployed"
                   yarn run deploy:ci
