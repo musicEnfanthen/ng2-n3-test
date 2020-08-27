@@ -140,8 +140,8 @@
                 "deploy": {
                     "builder": "angular-cli-ghpages:deploy",
                     "options": {
-                        "name": "${{ GIT_AUTHOR_NAME }}",
-                        "email": "${{ GIT_AUTHOR_EMAIL }}",
+                        "name": "github-actions",
+                        "email": "github-actions@users.noreply.github.com",
                         "baseHref": "/ng2-n3-test/",
                         "repo": "https://github.com/musicenfanthen/ng2-n3-test.git"
                     }
