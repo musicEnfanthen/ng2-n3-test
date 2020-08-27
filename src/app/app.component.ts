@@ -13,7 +13,7 @@ const { namedNode, literal, defaultGraph, quad } = DataFactory;
 export class AppComponent implements OnInit {
     appName = 'RDF Graph Visualizer';
 
-    title = 'Congratulations!';
+    title = 'Congratulations';
 
     triples: any;
 
