@@ -140,8 +140,8 @@
                 "deploy": {
                     "builder": "angular-cli-ghpages:deploy",
                     "options": {
-                        "name": "AppDeployer",
-                        "email": "stefan.muennich@unibas.ch",
+                        "name": "github-actions",
+                        "email": "github-actions-bot@users.noreply.github.com",
                         "baseHref": "/ng2-n3-test/",
                         "repo": "https://github.com/musicenfanthen/ng2-n3-test.git"
                     }
