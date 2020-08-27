@@ -140,8 +140,6 @@
                 "deploy": {
                     "builder": "angular-cli-ghpages:deploy",
                     "options": {
-                        "baseHref": "/ng2-n3-test/",
-                        "name": "ng2 n3 Test"
                     }
                 }
             }
