@@ -34,7 +34,7 @@ jobs:
                   yarn run test:ci
 
             - name: Upload code coverage
-              if: matrix.node-version = 12.18
+              if: matrix.node-version == 12.18
               uses: codecov/codecov-action@v1
               with:
                   flags: unittests
