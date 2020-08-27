@@ -18,7 +18,7 @@
         "lint": "ng lint",
         "e2e": "ng e2e",
         "predeploy:ci": "yarn build:gh",
-        "deploy:ci": "ng deploy --no-build --message \"Release $npm_package_name (v$npm_package_version) on gh-pages\" --base-href=/ng2-n3-test/ --repo=https://github.com/musicenfanthen/ng2-n3-test.git"
+        "deploy:ci": "ng deploy --no-silent --no-build --message \"Release $npm_package_name (v$npm_package_version) on gh-pages\" --base-href=/ng2-n3-test/ --repo=https://github.com/musicenfanthen/ng2-n3-test.git"
     },
     "private": true,
     "dependencies": {
