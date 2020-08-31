@@ -6,6 +6,8 @@ on:
             - '**'
         tags-ignore:
             - '*'
+        paths-ignore:
+            - '**.md'  # ignore changes to markdown files
 
 jobs:
     test:
