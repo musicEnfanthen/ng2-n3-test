@@ -8,7 +8,7 @@
         "serve:doc": "yarn doc --serve --watch",
         "build:doc": "yarn doc",
         "build": "ng build",
-        "build:app-shell": "ng run ng2-n3-test:app-shell",
+        "build:app-shell": "ng run ng2-n3-test:app-shell:production",
         "build:prod": "yarn build --prod",
         "postbuild:prod": "run-s gzip:dist build:app-shell build:doc",
         "build:gh": "yarn build:prod --base-href=/ng2-n3-test/",
