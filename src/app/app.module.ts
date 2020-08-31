@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { TwelveToneSpinnerComponent } from './twelve-tone-spinner/twelve-tone-spinner.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -11,11 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
         BrowserModule.withServerTransition({appId: 'serverApp'}),
         AppRoutingModule
     ],
-    declarations: [AppComponent, TwelveToneSpinnerComponent],
+    declarations: [AppComponent],
     providers: [],
-    exports: [
-        TwelveToneSpinnerComponent
-    ],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
