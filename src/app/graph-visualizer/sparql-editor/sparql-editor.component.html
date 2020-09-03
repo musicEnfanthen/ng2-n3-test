@@ -1,1 +1,15 @@
-<p>sparql-editor works!</p>
+<ngx-codemirror [(ngModel)]="query" [options]="cmSparqlConfig">
+    <!-- (change)="data.query = $event" -->
+</ngx-codemirror>
+
+<div>
+    <div fxLayout="row">
+        <button class="btn btn-info" color="primary" (click)="doQuery()">
+            Query
+        </button>
+
+        <button class="btn btn-outline-info" (click)="setInitialQuery()">
+            Reset
+        </button>
+    </div>
+</div>
