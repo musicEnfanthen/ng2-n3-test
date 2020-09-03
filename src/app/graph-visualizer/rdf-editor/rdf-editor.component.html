@@ -1,2 +1,12 @@
 <!-- CodeMirror editor instance -->
 <ngx-codemirror [(ngModel)]="triples" [options]="cmTriplesConfig"> </ngx-codemirror>
+
+<div>
+    <button class="btn btn-info" (click)="updateTriples()">
+        Update
+    </button>
+
+    <button class="btn btn-outline-info" (click)="setInitialTriples()">
+        Reset
+    </button>
+</div>
