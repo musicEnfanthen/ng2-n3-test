@@ -1,15 +1,12 @@
-<ngx-codemirror [(ngModel)]="query" [options]="cmSparqlConfig">
-    <!-- (change)="data.query = $event" -->
-</ngx-codemirror>
+<!-- CodeMirror editor instance (SPARQL) -->
+<ngx-codemirror [(ngModel)]="query" [options]="cmSparqlConfig"></ngx-codemirror>
 
 <div>
-    <div fxLayout="row">
-        <button class="btn btn-info" color="primary" (click)="doQuery()">
+        <button class="btn btn-info" color="primary" (click)="updateQuery()">
             Query
         </button>
 
         <button class="btn btn-outline-info" (click)="setInitialQuery()">
             Reset
         </button>
-    </div>
 </div>

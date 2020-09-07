@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 import { EditorConfiguration } from 'codemirror';
 import 'codemirror/addon/edit/matchbrackets';
@@ -7,9 +7,15 @@ import 'codemirror/mode/sparql/sparql';
 @Component({
     selector: 'app-sparql-editor',
     templateUrl: './sparql-editor.component.html',
-    styleUrls: ['./sparql-editor.component.css']
+    styleUrls: ['./sparql-editor.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SparqlEditorComponent implements OnInit {
+    @Input() query: string;
+
+    @Output() setInitialQueryRequest: EventEmitter<string> = new EventEmitter();
+    @Output() updateQueryRequest: EventEmitter<string> = new EventEmitter();
+
     /**
      * Public variable: cmSparqlConfig.
      *
@@ -23,38 +29,13 @@ export class SparqlEditorComponent implements OnInit {
         matchBrackets: true
     };
 
-    initialQuery = `PREFIX c: <http://example.org/cartoons#>
+    ngOnInit(): void {}
 
-        SELECT DISTINCT *
-        WHERE {
-            ?s ?p ?o .
-        }
-        LIMIT 50
-    `;
-
-    query: any;
-
-    ngOnInit(): void {
-        this.setInitialQuery();
-    }
-
-    /**
-     * Public method: setInitialQuery.
-     *
-     * It sets the initial value of the query variable
-     * from the RDF input data.
-     *
-     * @returns {void} Sets the initial query.
-     */
     setInitialQuery(): void {
-        if (!this.initialQuery) {
-            return;
-        }
-        this.query = this.initialQuery;
-        this.doQuery();
+        this.setInitialQueryRequest.emit();
     }
 
-    doQuery(): void {
-        console.log('query', this.query);
+    updateQuery(): void {
+        this.updateQueryRequest.emit(this.query);
     }
 }
