@@ -7,6 +7,7 @@ import { CodemirrorModule } from '@ctrl/ngx-codemirror';
 import { GraphVisualizerRoutingModule, routedGraphVisualizerComponents } from './graph-visualizer-routing.module';
 import { RdfEditorComponent } from './rdf-editor/rdf-editor.component';
 import { SparqlEditorComponent } from './sparql-editor/sparql-editor.component';
+import { ResultTableComponent } from './result-table/result-table.component';
 
 @NgModule({
     imports: [
@@ -15,6 +16,6 @@ import { SparqlEditorComponent } from './sparql-editor/sparql-editor.component';
         FormsModule,
         GraphVisualizerRoutingModule
     ],
-    declarations: [routedGraphVisualizerComponents, RdfEditorComponent, SparqlEditorComponent]
+    declarations: [routedGraphVisualizerComponents, RdfEditorComponent, SparqlEditorComponent, ResultTableComponent]
 })
 export class GraphVisualizerModule { }

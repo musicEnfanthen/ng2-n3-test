@@ -3,7 +3,7 @@
   "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": ["node"]
+    "types": ["node", "rdf-js", "n3", "sparqljs"]
   },
   "files": [
     "src/main.ts",

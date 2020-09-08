@@ -1,0 +1,12 @@
+<table>
+    <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+    </tr>
+    <tr *ngFor="let result of results">
+        <td>{{ result.subject.id }}</td>
+        <td>{{ result.predicate.id }}</td>
+        <td>{{ result.object.id }}</td>
+    </tr>
+</table>

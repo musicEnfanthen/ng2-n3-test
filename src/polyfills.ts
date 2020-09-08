@@ -55,8 +55,7 @@
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
-import 'zone.js/dist/zone';  // Included with Angular CLI.
-
+import 'zone.js/dist/zone'; // Included with Angular CLI.
 
 /***************************************************************************************************
  * APPLICATION IMPORTS
@@ -67,8 +66,6 @@ const w = window as any;
 // Add global to window, assigning the value of window itself.
 w.global = w;
 
-
-
 // workaround for Uncaught ReferenceError: Buffer is not defined
 // cf. https://github.com/agoncal/swagger-ui-angular6/issues/2
 // @ts-ignore
@@ -77,8 +74,8 @@ w.Buffer = []; // w.Buffer || require('buffer').Buffer;
 // workaround for Uncaught ReferenceError: process is not defined
 // cf. https://github.com/algolia/algoliasearch-client-javascript/issues/691
 w.process = {
-  env: { DEBUG: undefined },
-  version: []
+    env: { DEBUG: undefined },
+    version: []
 };
 
 // workaround for Uncaught ReferenceError: setImmediate is not defined

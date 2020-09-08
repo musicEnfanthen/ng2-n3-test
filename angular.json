@@ -24,6 +24,7 @@
                             "codemirror/mode/sparql/sparql",
                             "codemirror/mode/turtle/turtle",
                             "codemirror/addon/edit/matchbrackets",
+                            "sparqljs",
                             "readable-stream"
                         ],
                         "assets": [

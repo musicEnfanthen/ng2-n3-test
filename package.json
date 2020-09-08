@@ -48,6 +48,7 @@
         "codemirror": "^5.57.0",
         "n3": "^1.6.2",
         "rxjs": "~6.5.5",
+        "sparqljs": "^3.1.1",
         "tslib": "^2.0.0",
         "zone.js": "~0.10.3"
     },
@@ -62,6 +63,7 @@
         "@types/n3": "^1.4.4",
         "@types/node": "^14.0.27",
         "@types/rdf-js": "^4.0.0",
+        "@types/sparqljs": "^3.0.1",
         "angular-cli-ghpages": "^0.6.2",
         "codelyzer": "^6.0.0",
         "cross-var-no-babel": "^1.2.0",
@@ -81,5 +83,17 @@
         "tslint-angular": "^3.0.3",
         "tslint-config-prettier": "^1.18.0",
         "typescript": "~3.9.5"
+    },
+    "browser": {
+        "fs": false,
+        "path": false,
+        "os": false,
+        "crypto": false,
+        "stream": false,
+        "http": false,
+        "tls": false,
+        "zlib": false,
+        "https": false,
+        "net": false
     }
 }

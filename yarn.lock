@@ -1302,6 +1302,13 @@
   resolved "https://registry.yarnpkg.com/@types/source-list-map/-/source-list-map-0.1.2.tgz#0078836063ffaf17412349bba364087e0ac02ec9"
   integrity sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA==
 
+"@types/sparqljs@^3.0.1":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@types/sparqljs/-/sparqljs-3.0.1.tgz#198429396d5e7abb9cd280cb2843b30bad033b32"
+  integrity sha512-2SGl+Q4Gq0Rh/y0ZT6iBvQDDlws3NiPKfkMaEnGDWHvwNonlSZt03jm7HJ7C9I+huwBQ5l5SOYpeJsrh0nOJew==
+  dependencies:
+    "@types/rdf-js" "*"
+
 "@types/tern@*":
   version "0.23.3"
   resolved "https://registry.yarnpkg.com/@types/tern/-/tern-0.23.3.tgz#4b54538f04a88c9ff79de1f6f94f575a7f339460"
@@ -6629,6 +6636,14 @@ mute-stream@0.0.8:
   resolved "https://registry.yarnpkg.com/mute-stream/-/mute-stream-0.0.8.tgz#1630c42b2251ff81e2a283de96a5497ea92e5e0d"
   integrity sha512-nnbWWOkoWyUsTjKrhgD0dcz22mdkSnpYqbEjIm2nhwhuxlSkpywJmBo8h0ZqJdkp73mb90SssHkN4rsRaBAfAA==
 
+n3@^1.6.0:
+  version "1.6.3"
+  resolved "https://registry.yarnpkg.com/n3/-/n3-1.6.3.tgz#373de2ebfbce5c51edbd05f8cd36e76482107207"
+  integrity sha512-dN+8pLw2h1H1WQTW9VR3T16tHPDYdQP+YKXzbcpBCMCb9ZkksUyoVRRdtFGl3vosdET+NIB5eiIgth+4Vit6Yw==
+  dependencies:
+    queue-microtask "^1.1.2"
+    readable-stream "^3.6.0"
+
 n3@^1.6.2:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/n3/-/n3-1.6.2.tgz#3b40b6f6eeba3a115642eb9237109fff743be631"
@@ -8953,6 +8968,13 @@ sourcemap-codec@^1.4.1, sourcemap-codec@^1.4.4, sourcemap-codec@^1.4.8:
   version "1.4.8"
   resolved "https://registry.yarnpkg.com/sourcemap-codec/-/sourcemap-codec-1.4.8.tgz#ea804bd94857402e6992d05a38ef1ae35a9ab4c4"
   integrity sha512-9NykojV5Uih4lgo5So5dtw+f0JgJX30KCNI8gwhz2J9A15wD0Ml6tjHKwf6fTSa6fAdVBdZeNOs9eJ71qCk8vA==
+
+sparqljs@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/sparqljs/-/sparqljs-3.1.1.tgz#74b9f250fdcc1192971a709302b52ec102aaf003"
+  integrity sha512-HYSwEu++souL4YjJbRx+3dJ1aNYNuR+BbZdPmdrmD4QMSO14J63BEshpcSURcNRsuriOI+05wo2AaxVvpjhgkg==
+  dependencies:
+    n3 "^1.6.0"
 
 spdx-correct@^3.0.0:
   version "3.1.1"

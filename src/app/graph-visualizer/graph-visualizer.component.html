@@ -1,3 +1,5 @@
 <app-rdf-editor [triples]="triples" (setInitialTriplesRequest)="setInitialTriples()" (updateTriplesRequest)="updateTriples($event)"></app-rdf-editor>
 
 <app-sparql-editor [query]="query" (setInitialQueryRequest)="setInitialQuery()" (updateQueryRequest)="doQuery($event)"></app-sparql-editor>
+
+<app-result-table [results]="results"></app-result-table>

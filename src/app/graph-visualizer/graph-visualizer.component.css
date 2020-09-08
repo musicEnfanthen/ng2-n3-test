@@ -6,3 +6,7 @@ app-rdf-editor {
 app-sparql-editor {
     float: right;
 }
+
+app-result-table {
+    clear: both;
+}
