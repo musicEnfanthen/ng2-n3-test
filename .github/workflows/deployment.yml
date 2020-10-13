@@ -6,7 +6,6 @@ on:
         branches: [master] # generally, only deploy if we are on 'master'
         types:
             - completed
-            - requested
 
 jobs:
     build:
