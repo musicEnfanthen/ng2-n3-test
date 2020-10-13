@@ -3,7 +3,7 @@ name: Deployment
 on:
     workflow_run:
         workflows: ["CI Testing", "CodeQL"]
-        branches: [master] # generally, only deploy if we are on 'master'
+        branches: [master] # generally, only deploy on 'master'
         types:
             - completed
 
